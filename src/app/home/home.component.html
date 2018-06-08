@@ -1,0 +1,43 @@
+
+
+
+
+
+        <h4 style="margin-left:50px;">Drag Icons shown here.</h4>
+<div class="row">
+    <div class="col-md-3">
+        <div class="panel panel-success">
+            <div class="panel-heading">Available to drag</div>
+            <div class="panel-body">
+                <div  dnd-draggable [dragData]="1">
+                    <div class="panel-body"><i class="fa fa-plus-circle" style="font-size:40px;color:#ff6666;" title="addition of two numbers"></i>
+                    </div>
+                </div>
+                <div  dnd-draggable [dragData]="2">
+                    <div class="panel-body"><i class="fa fa-minus-circle" style="font-size:40px;color:rgb(137, 209, 202);" title="subtraction of two numbers"></i></div>
+                </div>
+                <div  dnd-draggable [dragData]="3">
+                    <div class="panel-body"><i class="fa fa-window-close-o" style="font-size:40px;color:rgba(255, 196, 0, 0.796);" title="multiplication of two numbers"></i></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-10">
+        
+        <div class="row">
+            <h4 style="margin-left:50px;">Drop Icons inside the box here.</h4>
+            <div class="col-md-8">
+                    <div dnd-droppable class="panel panel-warning" (onDropSuccess)="addTobox1Items($event)">
+                      
+                        <div class="panel-body"> 
+                           <div *ngIf="isShowAdd"> <add [fixedValue]=10 [downpayment1]=20></add></div> 
+                           <div *ngIf="isShowSub"> <sub [firstnumber]=20 [secondnumber]=10></sub></div> 
+                           <div *ngIf="isShowMul"> <mul [multiplier1]=20 [multiplier2]=10></mul></div> 
+
+                            <!-- <div *ngFor="let item of box2Items">dragData = {{item}}</div> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>

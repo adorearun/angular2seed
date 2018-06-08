@@ -1,0 +1,15 @@
+.container{
+    border: 1px solid red;
+    width: 70%;
+    height: 750px;
+ }
+
+ .panel-warning {
+    border-color: #faebcc;
+    margin-left: 50px;
+    
+}
+
+.panel {
+    margin-left: 50px; 
+}
